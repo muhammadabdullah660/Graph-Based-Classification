@@ -31,9 +31,9 @@ print("Accuracy: ", int(accuracy*100))
 precision, recall, f1_score, _ = precision_recall_fscore_support(y_test, predictions, average='weighted')
 
 # Print precision, recall, and F1-score
-print("Precision: ", precision)
-print("Recall: ", recall)
-print("F1-score: ", f1_score)
+print("Precision: ", int(precision*100))
+print("Recall: ", int(recall*100))
+print("F1-score: ", int(f1_score*100))
 
 # Calculate the confusion matrix
 cm = confusion_matrix(y_test, predictions)

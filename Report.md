@@ -85,6 +85,54 @@ The common subgraph identification was implemented in the `graph.py` module. We 
 
 ![4](D:\UET\Sixth Semester\GT\Project\Images\4.png)
 
+## Classification with K-Nearest Neighbors (KNN)
+
+This section describes the evaluation of the classification system using the K-Nearest Neighbors (KNN) algorithm. KNN is a non-parametric, lazy learning method that classifies data points based on the labels of their nearest neighbors in the feature space.
+
+**Code Implementation:**
+
+The provided code snippet demonstrates the implementation of KNN classification and evaluation metrics using the scikit-learn library. Key steps include:
+
+1. **Data Preprocessing:**
+    * Splitting the data into training and testing sets using `train_test_split`.
+    * Converting the document data (`travelList`, `fashionList`, `diseaseList`) into feature vectors using the `graphsToVectors` function (assuming it transforms document graphs into numerical features).
+
+2. **KNN Model Creation:**
+    * Initializing a `KNeighborsClassifier` object with `n_neighbors=3`, specifying the number of nearest neighbors to consider for classification.
+
+3. **Model Training:**
+    * Training the KNN model on the training data (`X_train`, `y_train`).
+
+4. **Prediction on Test Set:**
+    * Using the trained model to predict the class labels for the unseen test data (`X_test`).
+
+5. **Evaluation:**
+    * Calculating accuracy, precision, recall, and F1-score using `accuracy_score` and `precision_recall_fscore_support` functions.
+    * Generating a confusion matrix using `confusion_matrix` to visualize the classification performance.
+    * The code also includes visualization of the confusion matrix using libraries like `matplotlib.pyplot`.
+
+![5](D:\UET\Sixth Semester\GT\Project\Images\5.png)
+
+**Evaluation Metrics:**
+
+The following metrics were used to assess the performance of the KNN classifier:
+
+* **Accuracy:** Measures the overall proportion of correctly classified data points.
+* **Precision:** Represents the proportion of predicted positive labels that are actually positive.
+* **Recall:** Captures the proportion of actual positive labels that were correctly predicted.
+* **F1-score:** Combines precision and recall into a single metric, providing a balanced view of model performance.
+* **Confusion Matrix:** Visualizes the distribution of actual vs. predicted labels, highlighting true positives, false positives, false negatives, and true negatives.
+
+![6](D:\UET\Sixth Semester\GT\Project\Images\6.png)
+
+**Results:**
+
+The provided code outputs the calculated values for accuracy, precision, recall, and F1-score. Additionally, the confusion matrix plot offers a detailed breakdown of the model's classification performance across different classes (travel, fashion, disease).
+
+By analyzing these metrics, you can gain valuable insights into the effectiveness of the KNN classifier for your specific document classification task.
+
+
+
 # Results
 
 ## Data Curation
@@ -110,10 +158,6 @@ The use of graph-based features, particularly the identification of common subgr
 Although not explicitly mentioned in the code, critical reflection on the challenges encountered during the project and the identification of potential improvements to the approach are essential aspects of any research endeavor. Through thoughtful analysis and reflection, insights into the strengths and limitations of the methodology can be gained, paving the way for future enhancements and contributions to the field of document classification.
 
 # Future Work
-
-## Implementation of KNN Classification and Common Subgraph Identification
-
-The current implementation lacks the integration of KNN classification based on graph similarity measures and the identification of common subgraphs. These aspects were not included due to a lack of understanding during the project's execution. However, addressing these components is crucial for further enhancing the document classification system. In future work, efforts will be made to implement KNN classification and explore techniques for identifying common subgraphs within document graphs. This will involve gaining a deeper understanding of graph-based algorithms and methodologies to improve the accuracy and efficiency of the classification system.
 
 ## Integration of Advanced Graph-Based Techniques
 
