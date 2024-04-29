@@ -35,3 +35,34 @@ print("Precision: ", precision)
 print("Recall: ", recall)
 print("F1-score: ", f1_score)
 
+# Calculate the confusion matrix
+cm = confusion_matrix(y_test, predictions)
+
+# Import libraries for plotting (assuming you don't have them already)
+import matplotlib.pyplot as plt
+
+# Plot the confusion matrix
+plt.figure(figsize=(8, 6))
+plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
+plt.colorbar()
+
+# Set labels for each axis
+classes = ['travel', 'fashion', 'disease']  # Assuming these are your class labels
+plt.xticks(range(len(classes)), classes, rotation=45)
+plt.yticks(range(len(classes)), classes)
+
+# Add text labels to each cell of the confusion matrix
+thresh = cm.max() / 2.0
+for i in range(len(cm)):
+  for j in range(len(cm)):
+    plt.text(j, i, cm[i, j], ha="center", va="center",
+             color="white" if cm[i, j] > thresh else "black")
+
+# Set labels for title and axes
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.title('Confusion Matrix')
+
+# Show the confusion matrix plot
+plt.tight_layout()
+plt.show()
