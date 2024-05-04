@@ -33,7 +33,7 @@ def print_adjacency_list(G):
 def visualize_graph(G, file_path):
     plt.figure(figsize=(10, 10))
     pos = nx.spring_layout(G)
-    nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=10, edge_color='black', linewidths=1, arrows=True, arrowsize=20)
+    nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=100, edge_color='black', linewidths=1, arrows=True, arrowsize=20)
     labels = nx.get_edge_attributes(G, 'weight')
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
     plt.title(f'Directed Graph of Words in {os.path.basename(file_path)}')
