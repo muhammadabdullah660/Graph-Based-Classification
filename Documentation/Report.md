@@ -1,14 +1,3 @@
-<img src="D:\UET\Sixth Semester\EAD\Assignment 2 - AJAX\UET.png" width="10%">
-
-<h2><center>Graph Theory</center></h2>
-
-<h4><center>Submitted by:</center><h4><center>2021-CS-82 Muhammad Abdullah</center></h4>
-
-
-<h4><center>Submitted To:</center><h4><center>Mr. Waqas Ali</center></h4>
-
-
-
 # Introduction
 
 ## Background

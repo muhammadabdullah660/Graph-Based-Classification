@@ -56,6 +56,7 @@ def graphToVector(graph):
     return np.array([num_nodes])
 
 def graphsToVectors(graphs):
+    #print(np.array([graphToVector(graph) for graph in graphs]))
     return np.array([graphToVector(graph) for graph in graphs])
 
 def returnTravel():
